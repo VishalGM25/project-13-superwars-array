@@ -29,7 +29,7 @@ const initPlayers = (players) => {
     character.name = player;
     character.strength = getRandomStrength();
     character.image = `images/super-${i + 1}.png`;
-    character.type = getRandomStrength() > 50 ? "hero" : "villain";
+    character.type = i % 2 == 0 ? "hero" : "villain";
     detailedPlayers.push(character);
   });
 
