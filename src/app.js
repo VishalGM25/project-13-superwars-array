@@ -32,7 +32,7 @@ const initPlayers = (players) => {
     character.type = i % 2 == 0 ? "hero" : "villain";
     detailedPlayers.push(character);
   });
-
+  console.log(detailedPlayers);
   return detailedPlayers;
 };
 // getting random strength
@@ -47,7 +47,7 @@ const buildPlayers = (players, type) => {
   // Type your code here
   //console.log(players);
   let player = players
-    .filter((player) => player.type.toLowerCase() == type.toLowerCase())
+    .filter((player) => player.type == type)
     .map((player) => {
       return `<div class="player">
                 <img src="${player.image}" alt="">
@@ -55,7 +55,7 @@ const buildPlayers = (players, type) => {
                 <div class="strength">${player.strength}</div>
             </div>`;
     })
-    .join("");
+    .join();
   console.log(player);
   return player;
 };
