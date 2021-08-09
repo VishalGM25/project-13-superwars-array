@@ -55,7 +55,7 @@ const buildPlayers = (players, type) => {
                 <div class="strength">${player.strength}</div>
             </div>`;
     })
-    .join();
+    .join("");
   console.log(player);
   return player;
 };
